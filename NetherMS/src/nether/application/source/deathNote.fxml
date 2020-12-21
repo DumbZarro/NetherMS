@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #c2852e;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nether.application.controller.DeathNoteController">
+    <children>
+        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="46.0" prefWidth="300.0" />
+        <Pane nodeOrientation="RIGHT_TO_LEFT" prefHeight="174.0" prefWidth="1200.0" style="-fx-background-color: #000000;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="RIGHT" layoutX="461.0" layoutY="37.0" prefHeight="89.0" prefWidth="323.0" text="生死簿" wrapText="true">
+               <font>
+                  <Font size="54.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#fcfcfc" />
+                        <Stop color="RED" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+            <FontAwesomeIcon fill="#ff2626" glyphName="FIRE" layoutX="709.0" layoutY="97.0" size="3em" />
+            <FontAwesomeIcon fill="#ff2626" glyphName="FIRE" layoutX="495.0" layoutY="97.0" size="3em" text="" />
+         </children>
+        </Pane>
+      <TextField fx:id="Input" layoutX="29.0" layoutY="183.0" onKeyPressed="#pressedKey" promptText="请输入要查询的对象" />
+      <Label layoutX="271.0" layoutY="188.0" text="（根据令牌或姓名进行检索）">
+         <font>
+            <Font name="Microsoft YaHei UI" size="19.0" />
+         </font>
+      </Label>
+      <Accordion layoutX="-1.0" layoutY="228.0" prefHeight="572.0" prefWidth="1202.0">
+        <panes>
+          <TitledPane animated="false" lineSpacing="10.0" prefHeight="211.0" prefWidth="486.0" style="-fx-background-radius: 15px;" text="阳寿未尽" textFill="#d00000" wrapText="true">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="164.0" prefWidth="1200.0" style="-fx-background-color: #c2852e;">
+                     <children>
+                        <TableView fx:id="mortalTable" prefHeight="453.0" prefWidth="1200.0" style="-fx-background-color: #c2852e;">
+                           <columns>
+                              <TableColumn fx:id="mortalID" minWidth="-1.0" prefWidth="240.0" style="-fx-background-color: #000000000;" text="令牌" />
+                              <TableColumn fx:id="mortalName" prefWidth="240.0" text="姓名" />
+                              <TableColumn fx:id="mortalDeathCause" prefWidth="240.0" text="死因" />
+                              <TableColumn fx:id="mortalReincarnation" prefWidth="240.0" text="投胎地点" />
+                              <TableColumn fx:id="mortalOperation" prefWidth="240.0" text="操作" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+               <font>
+                  <Font size="18.0" />
+               </font>
+          </TitledPane>
+          <TitledPane animated="false" text="魂锁典狱长" textFill="#d00000">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #c2852e;">
+                     <children>
+                        <TableView fx:id="reliveTable" prefHeight="463.0" prefWidth="1200.0" style="-fx-background-color: #c2852e;">
+                           <columns>
+                              <TableColumn fx:id="reliveID" minWidth="-1.0" prefWidth="240.0" text="令牌" />
+                              <TableColumn fx:id="reliveName" prefWidth="240.0" text="姓名" />
+                              <TableColumn fx:id="reliveDeathCause" prefWidth="240.0" text="死因" />
+                              <TableColumn fx:id="reliveReincarnation" prefWidth="240.0" text="投胎地点" />
+                              <TableColumn fx:id="reliveOperation" prefWidth="240.0" text="操作" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+               <font>
+                  <Font size="18.0" />
+               </font>
+          </TitledPane>
+          <TitledPane animated="false" text="孤魂野鬼" textFill="#d00000">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="1200.0" style="-fx-background-color: #c2852e;">
+                     <children>
+                        <TableView fx:id="ghostTable" prefHeight="463.0" prefWidth="1200.0" style="-fx-background-color: #c2852e;">
+                           <columns>
+                              <TableColumn fx:id="GhostID" prefWidth="240.0" text="令牌" />
+                              <TableColumn fx:id="GhostName" prefWidth="240.0" text="姓名" />
+                              <TableColumn fx:id="GhostDeathCause" prefWidth="240.0" text="死因" />
+                              <TableColumn fx:id="GhostReincarnation" prefWidth="240.0" text="投胎情况" />
+                              <TableColumn fx:id="GhostOperation" prefWidth="240.0" text="操作" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+               <font>
+                  <Font size="18.0" />
+               </font>
+          </TitledPane>
+        </panes>
+      </Accordion>
+    </children>
+</AnchorPane>

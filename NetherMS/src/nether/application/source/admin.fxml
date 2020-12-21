@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import de.jensd.fx.glyphs.weathericons.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #ffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nether.application.controller.AdminController">
+    <children>
+        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="46.0" prefWidth="300.0" />
+        <Label alignment="CENTER" layoutX="214.0" layoutY="127.0" prefHeight="52.0" prefWidth="100.0" style="-fx-background-color: #0bcc42;" text="地府人数" textFill="#e9f4ec">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" layoutX="214.0" layoutY="179.0" prefHeight="46.0" prefWidth="100.0" style="-fx-background-color: #0bcc42;" text="w" textFill="#e9f4ec">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" layoutX="368.0" layoutY="179.0" prefHeight="46.0" prefWidth="100.0" style="-fx-background-color: #131dda;" text="x" textFill="#e9f4ec">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" layoutX="368.0" layoutY="127.0" prefHeight="52.0" prefWidth="100.0" style="-fx-background-color: #131dda;" text="今日入境" textFill="#e6e6f5">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" layoutX="525.0" layoutY="179.0" prefHeight="46.0" prefWidth="100.0" style="-fx-background-color: #2c2e2c;" text="y" textFill="#e9f4ec">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" layoutX="525.0" layoutY="127.0" prefHeight="52.0" prefWidth="100.0" style="-fx-background-color: #2c2e2c;" text="今日出境" textFill="#dee7e1">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Pane layoutY="-6.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="121.0" prefWidth="1200.0" style="-fx-background-color: #d00000;">
+            <children>
+                <HBox alignment="CENTER" layoutX="335.0" layoutY="11.0" prefHeight="100.0" prefWidth="458.0">
+                    <children>
+                        <Label prefHeight="63.0" prefWidth="402.0" text="欢迎您，典狱长！" textFill="#263231">
+                            <font>
+                                <Font size="49.0" />
+                            </font>
+                        </Label>
+                        <FontAwesomeIcon glyphName="" size="3.0em" wrappingWidth="45.0" />
+                    </children>
+                </HBox>
+            </children>
+        </Pane>
+        <Pane layoutY="262.0" prefHeight="540.0" prefWidth="839.0" style="-fx-background-color: #ECEEED;">
+            <children>
+                <Button fx:id="SearchNote" layoutX="189.0" layoutY="127.0" mnemonicParsing="false" onAction="#pressSearchNote" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #000000; -fx-background-radius: 100px;" text="O" textFill="#eee5e5">
+                    <font>
+                        <Font name="Microsoft YaHei" size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="QueryLife" layoutX="344.0" layoutY="127.0" mnemonicParsing="false" onAction="#pressQueryLife" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #000000; -fx-background-radius: 100px;" text="O" textFill="#f8f4f4">
+                    <font>
+                        <Font name="Microsoft YaHei" size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="ActionLog" layoutX="498.0" layoutY="127.0" mnemonicParsing="false" onAction="#pressActionLog" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #000000; -fx-background-radius: 100px;" text="O" textFill="WHITE">
+                    <font>
+                        <Font name="Microsoft YaHei" size="14.0" />
+                    </font>
+                </Button>
+                <Label layoutX="61.0" layoutY="14.0" text="当前权力导航">
+                    <font>
+                        <Font name="Microsoft YaHei UI" size="29.0" />
+                    </font>
+                </Label>
+                <Label layoutX="148.0" layoutY="193.0" text="查看生死簿">
+                    <font>
+                        <Font name="Microsoft YaHei UI" size="29.0" />
+                    </font>
+                </Label>
+                <Label layoutX="316.0" layoutY="193.0" text="查询寿命">
+                    <font>
+                        <Font name="Microsoft YaHei UI" size="29.0" />
+                    </font>
+                </Label>
+                <Label layoutX="470.0" layoutY="193.0" text="操作记录">
+                    <font>
+                        <Font name="Microsoft YaHei UI" size="29.0" />
+                    </font>
+                </Label>
+                <Label layoutX="565.0" layoutY="344.0" text="辞职">
+                    <font>
+                        <Font name="Microsoft YaHei UI" size="29.0" />
+                    </font>
+                </Label>
+                <Label layoutX="402.0" layoutY="344.0" prefHeight="38.0" prefWidth="126.0" text="超度厉鬼">
+                    <font>
+                        <Font name="Microsoft YaHei UI" size="29.0" />
+                    </font>
+                </Label>
+                <Label layoutX="258.0" layoutY="344.0" prefHeight="38.0" prefWidth="116.0" text="十鬼夜行">
+                    <font>
+                        <Font name="Microsoft YaHei UI" size="29.0" />
+                    </font>
+                </Label>
+                <Label layoutX="106.0" layoutY="344.0" text="冥币分配">
+                    <font>
+                        <Font name="Microsoft YaHei UI" size="29.0" />
+                    </font>
+                </Label>
+                <Button fx:id="Resign" layoutX="564.0" layoutY="278.0" mnemonicParsing="false" onAction="#pressResign" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #000000; -fx-background-radius: 100px;" text="O" textFill="WHITE">
+                    <font>
+                        <Font name="Microsoft YaHei" size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="ExpiateGhost" layoutX="435.0" layoutY="278.0" mnemonicParsing="false" onAction="#pressExpiateGhost" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #000000; -fx-background-radius: 100px;" text="O" textFill="#f5efef">
+                    <font>
+                        <Font name="Microsoft YaHei" size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="DevilsNight" layoutX="286.0" layoutY="278.0" mnemonicParsing="false" onAction="#pressDevilsNight" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #000000; -fx-background-radius: 100px;" text="O" textFill="#f8f4f4">
+                    <font>
+                        <Font name="Microsoft YaHei" size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="ManageHellMoney" layoutX="133.0" layoutY="278.0" mnemonicParsing="false" onAction="#pressManageHellMoney" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #000000; -fx-background-radius: 100px;" text="O" textFill="#eee5e5">
+                    <font>
+                        <Font name="Microsoft YaHei" size="14.0" />
+                    </font>
+                </Button>
+            </children>
+        </Pane>
+        <Pane layoutX="837.0" layoutY="115.0" prefHeight="685.0" prefWidth="363.0" style="-fx-background-color: #A5A5A5;">
+            <children>
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="52.0" prefWidth="363.0" style="-fx-background-color: #7A7A7A; -fx-background-radius: 15px;" text="今日待办" textFill="#f8eaea">
+                    <font>
+                        <Font name="Microsoft YaHei UI" size="29.0" />
+                    </font>
+                </Label>
+                <Label layoutX="8.0" layoutY="59.0" text="辰时     抓捕野鬼秦桧">
+                    <font>
+                        <Font name="Microsoft YaHei UI" size="29.0" />
+                    </font>
+                </Label>
+                <Label layoutX="8.0" layoutY="197.0" text="午时     押送孙悟空至刑场">
+                    <font>
+                        <Font name="Microsoft YaHei UI" size="29.0" />
+                    </font>
+                </Label>
+                <Label layoutX="8.0" layoutY="244.0" text="亥时     维持会场安保">
+                    <font>
+                        <Font name="Microsoft YaHei UI" size="29.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutY="340.0" prefHeight="52.0" prefWidth="363.0" style="-fx-background-color: #7A7A7A; -fx-background-radius: 15px;" text="阴历十一月廿二" textFill="#f8eaea">
+                    <font>
+                        <Font name="Microsoft YaHei UI" size="29.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="294.0" prefHeight="60.0" prefWidth="363.0" style="-fx-background-color: #7A7A7A; -fx-background-radius: 15px;" text="地符223年" textFill="#f8eaea">
+                    <font>
+                        <Font name="Microsoft YaHei UI" size="29.0" />
+                    </font>
+                </Label>
+                <Label layoutX="14.0" layoutY="392.0" text="小寒">
+                    <font>
+                        <Font name="Microsoft YaHei UI" size="29.0" />
+                    </font>
+                </Label>
+                <WeatherIcon glyphName="RAIN" layoutX="93.0" layoutY="472.0" size="2.5em" />
+                <WeatherIcon glyphName="CLOUDY" layoutX="228.0" layoutY="471.0" size="2.5em" />
+                <Label layoutX="90.0" layoutY="506.0" text="17°">
+                    <font>
+                        <Font name="Microsoft YaHei UI" size="29.0" />
+                    </font>
+                </Label>
+                <Label layoutX="168.0" layoutY="506.0" text="➡">
+                    <font>
+                        <Font name="Microsoft YaHei UI" size="29.0" />
+                    </font>
+                </Label>
+                <Label layoutX="227.0" layoutY="506.0" text="21°">
+                    <font>
+                        <Font name="Microsoft YaHei UI" size="29.0" />
+                    </font>
+                </Label>
+                <Label layoutX="8.0" layoutY="109.0" text="丑时     将第七批厉鬼打入">
+                    <font>
+                        <Font name="Microsoft YaHei UI" size="29.0" />
+                    </font>
+                </Label>
+                <Label layoutX="110.0" layoutY="147.0" text="十八层地狱">
+                    <font>
+                        <Font name="Microsoft YaHei UI" size="29.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>
